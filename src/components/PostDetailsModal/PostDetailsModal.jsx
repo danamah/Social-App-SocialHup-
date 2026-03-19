@@ -7,7 +7,7 @@ import PostCardBody from "../Cards/PostCard/PostCardBody";
 import PostCardFooter from "../Cards/PostCard/PostCardFooter";
 import PostCardHeader from "../Cards/PostCard/PostCardHeader";
 import { getSinglePost } from "../services/postServices";
-import { getPostComments } from "../services/commentAndRepliesServices";
+import { getPostComments } from "../services/commentReplyServices";
  
 export default function PostDetailsModal({
   isOpen,
