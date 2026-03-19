@@ -14,7 +14,7 @@
 
 A modern, fully responsive social media platform built with React and Vite. Connect with friends, share posts, engage with comments, and explore profiles—all in one beautifully designed application.
 
-[🌍 Live Demo](https://social-app-social-hup-app.vercel.app/) • [📦 Repository](https://github.com/danamah/Social-App-SocialHup-App.git)
+[🌍 Live Demo](https://social-app-social-hup-18jf.vercel.app/) • [📦 Repository](https://github.com/danamah/Social-App-SocialHup-.git)
 
 </div>
 
