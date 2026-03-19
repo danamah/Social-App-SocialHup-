@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@plugin './hero.js';
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
+
+/* ── Purple Brand Palette ─────────────────────────────────── */
+@theme {
+  --color-brand-50:  #faf5ff;
+  --color-brand-100: #f3e8ff;
+  --color-brand-200: #e9d5ff;
+  --color-brand-300: #d8b4fe;
+  --color-brand-400: #c084fc;
+  --color-brand-500: #a855f7;
+  --color-brand-600: #9333ea;
+  --color-brand-700: #7e22ce;
+  --color-brand-800: #6b21a8;
+  --color-brand-900: #581c87;
+
+  --gradient-brand: linear-gradient(135deg, #a855f7, #7e22ce);
+  --gradient-brand-soft: linear-gradient(135deg, #e9d5ff, #d8b4fe);
+}
+
+/* ── CSS Variables for theming ────────────────────────────── */
+:root {
+  --bg-primary:     #ffffff;
+  --bg-secondary:   #faf5ff;
+  --bg-card:        #ffffff;
+  --bg-page:        #f3f4f6;
+  --text-primary:   #1a1a2e;
+  --text-secondary: #6b7280;
+  --text-muted:     #d1d5db;
+  --border-color:   #e9d5ff;
+  --shadow-color:   rgba(168, 85, 247, 0.12);
+}
+
+.dark {
+  --bg-primary:     #0f0a1a;
+  --bg-secondary:   #1a1030;
+  --bg-card:        #1e1535;
+  --bg-page:        #0a0612;
+  --text-primary:   #f3e8ff;
+  --text-secondary: #c084fc;
+  --text-muted:     #7c6a9e;
+  --border-color:   #3b1f6e;
+  --shadow-color:   rgba(168, 85, 247, 0.2);
+}
+
+/* ── Base ─────────────────────────────────────────────────── */
+body {
+  font-family: 'Cairo Variable', sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ── Semantic utility classes ─────────────────────────────── */
+.bg-theme-page      { background-color: var(--bg-page); }
+.bg-theme-primary   { background-color: var(--bg-primary); }
+.bg-theme-secondary { background-color: var(--bg-secondary); }
+.bg-theme-card      { background-color: var(--bg-card); }
+
+.text-theme-primary   { color: var(--text-primary); }
+.text-theme-secondary { color: var(--text-secondary); }
+.text-theme-muted     { color: var(--text-muted); }
+
+.border-theme { border-color: var(--border-color); }
+
+.gradient-brand      { background: var(--gradient-brand); }
+.gradient-brand-soft { background: var(--gradient-brand-soft); }
+
+/* ── Auth card — single class for the white form wrapper ──── */
+.auth-card {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-brand);
+  border-radius: 999px;
+}
