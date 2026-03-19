@@ -313,7 +313,7 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 For questions, suggestions, or support, please reach out via:
 
 - 🐙 GitHub: [@danamah](https://github.com/danamah)
-- 🌐 Live Demo: [SocialHub](https://social-app-social-hup-app.vercel.app/)
+- 🌐 Live Demo: [SocialHub](https://social-app-social-hup-18jf.vercel.app/)
 
 ---
 
