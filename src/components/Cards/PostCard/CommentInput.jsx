@@ -8,7 +8,7 @@ import { IoSend } from "react-icons/io5";
 import { toast } from "react-toastify";
 
 import { UserLoggedInfoContext } from "../../context/UserLoggedContext";
-import { createComment } from "../../services/Commentandrepliesservices";
+import { createComment } from "../../services/commentReplyServices";
 
 const ALLOWED_TYPES = ["image/jpeg", "image/png", "image/jpg", "image/webp"];
 

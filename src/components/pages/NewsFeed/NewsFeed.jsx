@@ -50,12 +50,12 @@ export default function NewsFeed() {
       <title>Home | SocialHub</title>
 
       {/* Mobile sidebar triggers */}
-      <div className="lg:hidden fixed top-20 start-4 z-50">
+      <div className="lg:hidden fixed top-20 inset-s-4 z-50">
         <Button size="sm" color="secondary" onPress={leftDrawer.onOpen}>
           <RiUserSettingsFill className="text-xl" />
         </Button>
       </div>
-      <div className="lg:hidden fixed top-20 end-4 z-50">
+      <div className="lg:hidden fixed top-20 inset-e-4 z-50">
         <Button size="sm" color="secondary" onPress={rightDrawer.onOpen}>
           <FaFire className="text-xl" />
         </Button>

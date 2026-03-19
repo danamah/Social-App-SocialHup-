@@ -20,7 +20,6 @@ export default function PostDetailsPage() {
   async function fetchPostDetails() {
     setIsLoading(true);
     try {
-      // الـ API الجديدة — post وcomments منفصلين
       const [post, { comments }] = await Promise.all([
         getSinglePost(id),
         getPostComments(id, { limit: 20 }),

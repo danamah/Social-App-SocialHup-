@@ -1,6 +1,6 @@
 // src/components/pages/Notifications/NotificationsPage.jsx
 import { Avatar, Button, Chip, Divider, Skeleton } from "@heroui/react";
-import { useInfiniteQuery, useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { FaBell, FaCheckDouble } from "react-icons/fa";
 import { useNavigate } from "react-router";
@@ -31,7 +31,7 @@ function getTypeConfig(type) {
 function NotificationItem({ notification, onMarkRead }) {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const { emoji, color, key } = getTypeConfig(notification.type);
+  const { emoji, key } = getTypeConfig(notification.type);
 
   function handleClick() {
     if (!notification.isRead) onMarkRead(notification._id);
@@ -52,13 +52,13 @@ function NotificationItem({ notification, onMarkRead }) {
       `}
     >
       {/* Actor avatar with emoji badge */}
-      <div className="relative flex-shrink-0">
+      <div className="relative shrink-0">
         <Avatar
           src={notification.actor?.photo}
           name={notification.actor?.name}
           size="md"
         />
-        <span className="absolute -bottom-1 -end-1 text-sm">{emoji}</span>
+        <span className="absolute -bottom-1 -inset-e-1 text-sm">{emoji}</span>
       </div>
 
       {/* Content */}
@@ -83,7 +83,7 @@ function NotificationItem({ notification, onMarkRead }) {
 
       {/* Unread dot */}
       {!notification.isRead && (
-        <span className="w-2.5 h-2.5 rounded-full bg-brand-500 flex-shrink-0 mt-1" />
+        <span className="w-2.5 h-2.5 rounded-full bg-brand-500 shrink-0 mt-1" />
       )}
     </div>
   );
@@ -112,7 +112,7 @@ export default function NotificationsPage() {
   const [showUnreadOnly, setShowUnreadOnly] = React.useState(false);
   const [page, setPage] = React.useState(1);
 
-  const { data, isLoading, isFetching } = useQuery({
+  const { data, isLoading} = useQuery({
     queryKey: ["notifications", { unread: showUnreadOnly, page }],
     queryFn: () => getNotifications({ unread: showUnreadOnly, page, limit: 15 }),
     staleTime: 30_000,

@@ -16,7 +16,7 @@ import {
   createComment, deleteComment,
   getPostComments,
   updateComment,
-} from "../../services/Commentandrepliesservices";
+} from "../../services/commentReplyServices";
 import { sharePost, toggleBookmarkPost, toggleLikePost } from "../../services/postServices";
 import CommentInput from "./CommentInput";
 import SharePostModal from "./SharePostModal";
@@ -238,7 +238,7 @@ export default function PostCardFooter({ post, postComments, setPostComments, po
 
         {/* Share */}
         <button
-          onClick={shareModal.onOpen}   // ← بدل handleShare المباشرة
+          onClick={shareModal.onOpen}  
           className="flex items-center gap-1.5 text-theme-secondary hover:text-yellow-500 transition-colors duration-250 cursor-pointer"
         >
           <FiShare2 className="text-lg" />

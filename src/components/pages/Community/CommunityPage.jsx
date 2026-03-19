@@ -52,7 +52,7 @@ function SuggestionCard({ user }) {
         variant={followed ? "bordered" : "solid"}
         isLoading={isPending}
         onPress={() => handleFollow()}
-        className={`ms-3 flex-shrink-0 ${followed ? "text-theme-primary" : "text-white"}`}
+        className={`ms-3 shrink-0 ${followed ? "text-theme-primary" : "text-white"}`}
       >
         {followed
           ? t("community.following", "Following")
@@ -66,12 +66,12 @@ function SuggestionCard({ user }) {
 function SuggestionSkeleton() {
   return (
     <div className="flex items-center gap-3 p-4 bg-theme-card border border-theme rounded-xl">
-      <Skeleton className="w-10 h-10 rounded-full flex-shrink-0" />
+      <Skeleton className="w-10 h-10 rounded-full shrink-0" />
       <div className="flex-1 space-y-2">
         <Skeleton className="h-3 w-1/3 rounded-lg" />
         <Skeleton className="h-3 w-1/4 rounded-lg" />
       </div>
-      <Skeleton className="h-8 w-20 rounded-full flex-shrink-0" />
+      <Skeleton className="h-8 w-20 rounded-full shrink-0" />
     </div>
   );
 }

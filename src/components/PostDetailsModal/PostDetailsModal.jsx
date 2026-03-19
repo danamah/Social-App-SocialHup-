@@ -15,7 +15,6 @@ export default function PostDetailsModal({
   postId,
   postComments,     
   setPostComments,  
-  onRefresh,
 }) {
   const { t } = useTranslation();
   const [isLoading, setIsLoading] = useState(false);
